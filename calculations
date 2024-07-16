@@ -1,0 +1,21 @@
+#calculate the cost and revenue from the dataset
+
+# calculate total costs and revenue per order
+food_orders['Total Costs'] = food_orders['Delivery Fee'] + food_orders['Payment Processing Fee'] + food_orders['Discount Amount']
+food_orders['Revenue'] = food_orders['Commission Fee']
+food_orders['Profit'] = food_orders['Revenue'] - food_orders['Total Costs']
+
+# aggregate data to get overall metrics
+total_orders = food_orders.shape[0]
+total_revenue = food_orders['Revenue'].sum()
+total_costs = food_orders['Total Costs'].sum()
+total_profit = food_orders['Profit'].sum()
+
+overall_metrics = {
+    "Total Orders": total_orders,
+    "Total Revenue": total_revenue,
+    "Total Costs": total_costs,
+    "Total Profit": total_profit
+}
+
+print(overall_metrics)
