@@ -1,0 +1,5 @@
+#importiong dataset
+import pandas as pd
+
+food_orders = pd.read_csv("food_orders_new_delhi.csv")
+print(food_orders.head())
