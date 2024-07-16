@@ -1,0 +1,10 @@
+import matplotlib.pyplot as plt
+
+# histogram of profits per order
+plt.figure(figsize=(10, 6))
+plt.hist(food_orders['Profit'], bins=50, color='skyblue', edgecolor='black')
+plt.title('Profit Distribution per Order in Food Delivery')
+plt.xlabel('Profit')
+plt.ylabel('Number of Orders')
+plt.axvline(food_orders['Profit'].mean(), color='red', linestyle='dashed', linewidth=1)
+plt.show()
