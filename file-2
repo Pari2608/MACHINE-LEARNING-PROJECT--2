@@ -1,0 +1,2 @@
+#information of food from dataset
+print(food_orders.info())
