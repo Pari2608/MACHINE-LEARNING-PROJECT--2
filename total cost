@@ -1,0 +1,6 @@
+# pie chart for the proportion of total costs
+costs_breakdown = food_orders[['Delivery Fee', 'Payment Processing Fee', 'Discount Amount']].sum()
+plt.figure(figsize=(7, 7))
+plt.pie(costs_breakdown, labels=costs_breakdown.index, autopct='%1.1f%%', startangle=140, colors=['tomato', 'gold', 'lightblue'])
+plt.title('Proportion of Total Costs in Food Delivery')
+plt.show()
